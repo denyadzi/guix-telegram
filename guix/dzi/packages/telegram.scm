@@ -38,7 +38,7 @@
          (file-name
           (git-file-name name version))
          (sha256
-          (base32 "1xhnqdcgpzswnzal4imp8d9f015gs786qkk5zfjhrwn4xwbjyl9q"))))
+          (base32 "0xmdvkl14xjpgg8wirqfb8qaz6kwbnssfi0lkwiqcw1zkzg28mgw"))))
       (build-system gnu-build-system)
       (arguments
        `(#:tests? #f                    ; No target
