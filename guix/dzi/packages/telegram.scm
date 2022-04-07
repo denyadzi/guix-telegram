@@ -9,7 +9,6 @@
   #:use-module (gnu packages gnupg)
   #:use-module (gnu packages libevent)
   #:use-module (gnu packages pkg-config)
-  #:use-module (gnu packages telegram)
   #:use-module (gnu packages readline)
   #:use-module (gnu packages python)
   #:use-module (gnu packages lua)
@@ -92,23 +91,23 @@
       (license license:lgpl2.1+))))
 
 (define-public telegram-cli
-  (let ((commit "6547c0b21b977b327b3c5e8142963f4bc246187a")
-        (revision "325"))
+  (let ((commit "08f40eab02b22c82af0b67ab8d6679a1e7a4461d")
+        (revision "0"))
     (package
       (name "telegram-cli")
       (version
-       (git-version "1.3.1" revision commit))
+       (git-version "1.3.2" revision commit))
       (source
        (origin
          (method git-fetch)
          (uri
           (git-reference
-           (url "https://github.com/vysheng/tg.git")
+           (url "https://github.com/denyadzi/tg.git")
            (commit commit)))
          (file-name
           (git-file-name name version))
          (sha256
-          (base32 "0c1w7jgska71jjbvg1y09v52549pwa4zkdjly18yxywn7gayd2p6"))))
+          (base32 "0a7cnk4b0s61l9n6qvydcz3d7bgmybp06rdzxh47pa8izvj5czpr"))))
       (build-system gnu-build-system)
       (arguments
        `(#:tests? #f                    ; No target
